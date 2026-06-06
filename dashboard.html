@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Student Result Management System
+    </title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="main-title">
+        Student Result Management System
+    </h1>
+
+    <div class="form-box">
+
+        <input type="text"
+               id="schoolName"
+               placeholder="School / College Name">
+
+        <input type="text"
+               id="studentStd"
+               placeholder="Standard / Class">
+
+        <input type="text"
+               id="studentName"
+               placeholder="Student Name">
+
+        <input type="text"
+               id="rollNumber"
+               placeholder="Roll Number">
+
+        <div id="subjectsContainer"></div>
+
+        <button onclick="addSubject()">
+            Add Subject
+        </button>
+
+        <button onclick="calculateResult()">
+            Generate Result
+        </button>
+        
+        <button id="saveBtn" onclick="saveResult()">
+            Save Result
+        </button>
+        
+        <button onclick="window.location.href='results.html'">
+            View Results
+        </button>
+    </div>
+
+    <div class="result-box"
+         id="resultBox">
+
+        <div class="marksheet">
+
+            <h1 id="collegeHeading"></h1>
+
+            <h2>
+                STUDENT MARKSHEET
+            </h2>
+
+            <div class="student-info">
+
+                <p>
+                    <strong>Student Name :</strong>
+                    <span id="nameResult"></span>
+                </p>
+
+                <p>
+                    <strong>Roll Number :</strong>
+                    <span id="rollResult"></span>
+                </p>
+
+                <p>
+                    <strong>Standard/Class :</strong>
+                    <span id="stdResult"></span>
+                </p>
+
+            </div>
+
+            <table id="resultTable">
+
+                <thead>
+
+                <tr>
+
+                    <th>SR NO.</th>
+
+                    <th>SUBJECT</th>
+
+                    <th>MARKS OBTAINED</th>
+
+                    <th>OUT OF</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody></tbody>
+
+            </table>
+
+            <div class="summary">
+
+                <p>
+                    <strong>Total :</strong>
+                    <span id="totalResult"></span>
+                </p>
+
+                <p>
+                    <strong>Percentage :</strong>
+                    <span id="percentageResult"></span>
+                </p>
+
+                <p>
+                    <strong>Grade :</strong>
+                    <span id="gradeResult"></span>
+                </p>
+
+                <p>
+                    <strong>Result :</strong>
+                    <span id="statusResult"></span>
+                </p>
+
+            </div>
+
+            <div class="signature-section">
+
+                <div>
+
+                    ___________________
+
+                    <br>
+
+                    Class Teacher
+
+                </div>
+
+                <div>
+
+                    ___________________
+
+                    <br>
+
+                    Principal
+
+                </div>
+
+            </div>
+
+            <button onclick="window.print()">
+                Print Result
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+
+</html>

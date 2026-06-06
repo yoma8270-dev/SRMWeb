@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Result</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#1e3c72;
+    padding:20px;
+}
+
+.container{
+    background:white;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid black;
+    padding:10px;
+    text-align:center;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:20px;
+}
+
+@media print{
+
+    button{
+        display:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="school"></h1>
+
+<h2>Student Marksheet</h2>
+
+<p>
+<strong>Name:</strong>
+<span id="studentName"></span>
+</p>
+
+<p>
+<strong>Roll Number:</strong>
+<span id="rollNumber"></span>
+</p>
+
+<p>
+<strong>Class:</strong>
+<span id="standard"></span>
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Subject</th>
+<th>Obtained</th>
+<th>Total</th>
+</tr>
+
+</thead>
+
+<tbody id="subjectTable">
+
+</tbody>
+
+</table>
+
+<h3 id="percentage"></h3>
+<h3 id="grade"></h3>
+<h3 id="status"></h3>
+
+<button onclick="window.print()">
+Print Result
+</button>
+
+</div>
+
+<script type="module" src="viewResult.js"></script>
+
+</body>
+</html>
